@@ -22,7 +22,7 @@ RUN mkdir /etc/impala/conf.bb && \
     update-alternatives --set impala-conf /etc/impala/conf.bb
 VOLUME /etc/impala/conf.bb
 
-# external ports
-EXPOSE 25000 25010 25020
+# https://www.cloudera.com/documentation/enterprise/latest/topics/cm_ig_ports_impala.html
+EXPOSE 15000 15001 15002 21000 21050 22000 23000 23020 24000 26000 28000 25000 25010 25020
 
 CMD ["/bin/bash"]
