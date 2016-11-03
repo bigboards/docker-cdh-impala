@@ -6,7 +6,7 @@ MAINTAINER bigboards
 USER root 
 
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y impala impala-shell \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y impala impala-state-store impala-catalog impala-server impala-shell \
     && apt-get clean \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
