@@ -17,10 +17,10 @@ ADD docker_files/impala-catalog-run.sh /apps/impala-catalog-run.sh
 RUN chmod a+x /apps/impala-server-run.sh /apps/impala-statestore-run.sh /apps/impala-catalog-run.sh
 
 # declare the volumes
-RUN mkdir /etc/hadoop/conf.bb && \
-    update-alternatives --install /etc/hadoop/conf hadoop-conf /etc/hadoop/conf.bb 1 && \
-    update-alternatives --set hadoop-conf /etc/hadoop/conf.bb
-VOLUME /etc/hadoop/conf.bb
+RUN mkdir /etc/impala/conf.bb && \
+    update-alternatives --install /etc/impala/conf impala-conf /etc/impala/conf.bb 1 && \
+    update-alternatives --set impala-conf /etc/impala/conf.bb
+VOLUME /etc/impala/conf.bb
 
 # external ports
 EXPOSE 25000 25010 25020
