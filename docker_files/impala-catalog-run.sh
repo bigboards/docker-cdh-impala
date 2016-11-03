@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/impala --config /etc/hadoop/conf --service catalog
+/usr/bin/impala --config /etc/impala/conf --service catalog
